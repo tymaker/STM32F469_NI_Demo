@@ -61,6 +61,46 @@ static void SystemClock_Config(void);
   * @retval None
   */
 	
+void LED_Init()
+{
+  GPIO_InitTypeDef  gpio_init_structure;
+
+    __HAL_RCC_GPIOD_CLK_ENABLE();
+	  __HAL_RCC_GPIOG_CLK_ENABLE();
+	  __HAL_RCC_GPIOK_CLK_ENABLE();
+	
+    gpio_init_structure.Pin   = GPIO_PIN_4 | GPIO_PIN_5;
+    gpio_init_structure.Mode  = GPIO_MODE_OUTPUT_PP;
+    gpio_init_structure.Pull  = GPIO_PULLUP;
+    gpio_init_structure.Speed = GPIO_SPEED_HIGH;
+	  HAL_GPIO_Init(GPIOD, &gpio_init_structure);
+	
+    gpio_init_structure.Pin   = GPIO_PIN_6;
+    gpio_init_structure.Mode  = GPIO_MODE_OUTPUT_PP;
+    gpio_init_structure.Pull  = GPIO_PULLUP;
+    gpio_init_structure.Speed = GPIO_SPEED_HIGH;
+	  HAL_GPIO_Init(GPIOG, &gpio_init_structure);
+
+    gpio_init_structure.Pin   = GPIO_PIN_3;
+    gpio_init_structure.Mode  = GPIO_MODE_OUTPUT_PP;
+    gpio_init_structure.Pull  = GPIO_PULLUP;
+    gpio_init_structure.Speed = GPIO_SPEED_HIGH;
+	  HAL_GPIO_Init(GPIOK, &gpio_init_structure);
+
+    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_4, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_5, GPIO_PIN_SET);
+	  HAL_GPIO_WritePin(GPIOG, GPIO_PIN_6, GPIO_PIN_SET);
+	  HAL_GPIO_WritePin(GPIOK, GPIO_PIN_3, GPIO_PIN_SET);
+
+}
+
+void delay(int s)
+{
+    int a,b;
+	  for(a=s;a>0;a--)
+	      for(b=9000;b>0;b--);
+}
+
 
 int main(void)
 {
