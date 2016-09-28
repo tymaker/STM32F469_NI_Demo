@@ -60,50 +60,34 @@ static void SystemClock_Config(void);
   * @param  None
   * @retval None
   */
+
+void Init_GPIO(){
 	
-void LED_Init()
-{
-  GPIO_InitTypeDef  gpio_init_structure;
-
-    __HAL_RCC_GPIOD_CLK_ENABLE();
-	  __HAL_RCC_GPIOG_CLK_ENABLE();
-	  __HAL_RCC_GPIOK_CLK_ENABLE();
+	  /********************
+			LED1  PG6
+			LED2	PD4
+			LED3	PD5
+			LED4	PK3
+			KEY1  PA0
+		*********************/
+		GPIO_InitTypeDef GPIO_Init_Structure;
+		
+		__HAL_RCC_GPIOG_CLK_ENABLE();
 	
-    gpio_init_structure.Pin   = GPIO_PIN_4 | GPIO_PIN_5;
-    gpio_init_structure.Mode  = GPIO_MODE_OUTPUT_PP;
-    gpio_init_structure.Pull  = GPIO_PULLUP;
-    gpio_init_structure.Speed = GPIO_SPEED_HIGH;
-	  HAL_GPIO_Init(GPIOD, &gpio_init_structure);
+		GPIO_Init_Structure.Pin   = GPIO_PIN_6;
+	  GPIO_Init_Structure.Mode  = GPIO_MODE_OUTPUT_PP;
+	  GPIO_Init_Structure.Pull  = GPIO_PULLUP;
+	  GPIO_Init_Structure.Speed = GPIO_SPEED_HIGH;
+	  
+		HAL_GPIO_Init(GPIOG, &GPIO_Init_Structure);
 	
-    gpio_init_structure.Pin   = GPIO_PIN_6;
-    gpio_init_structure.Mode  = GPIO_MODE_OUTPUT_PP;
-    gpio_init_structure.Pull  = GPIO_PULLUP;
-    gpio_init_structure.Speed = GPIO_SPEED_HIGH;
-	  HAL_GPIO_Init(GPIOG, &gpio_init_structure);
-
-    gpio_init_structure.Pin   = GPIO_PIN_3;
-    gpio_init_structure.Mode  = GPIO_MODE_OUTPUT_PP;
-    gpio_init_structure.Pull  = GPIO_PULLUP;
-    gpio_init_structure.Speed = GPIO_SPEED_HIGH;
-	  HAL_GPIO_Init(GPIOK, &gpio_init_structure);
-
-    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_4, GPIO_PIN_RESET);
-    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_5, GPIO_PIN_SET);
-	  HAL_GPIO_WritePin(GPIOG, GPIO_PIN_6, GPIO_PIN_SET);
-	  HAL_GPIO_WritePin(GPIOK, GPIO_PIN_3, GPIO_PIN_SET);
-
+		HAL_GPIO_WritePin(GPIOG, GPIO_PIN_6, GPIO_PIN_RESET);
 }
-
-void delay(int s)
-{
-    int a,b;
-	  for(a=s;a>0;a--)
-	      for(b=9000;b>0;b--);
-}
-
 
 int main(void)
 {
+	
+	
   /* STM32F4xx HAL library initialization:
        - Configure the Flash prefetch, instruction and Data caches
        - Systick timer is configured by default as source of time base, but user 
@@ -115,13 +99,21 @@ int main(void)
        - Low Level Initialization: global MSP (MCU Support Package) initialization
      */
   HAL_Init();
+	
   /* Configure the system clock to 180 MHz */
   SystemClock_Config();
-
+	
+	
+	Init_GPIO();  //INIT GPIO
+	
   /* Infinite loop */
   while (1)
   {
-
+		
+	    /* Insert a 1s delay */
+			HAL_Delay(1000);
+			HAL_GPIO_TogglePin(GPIOG, GPIO_PIN_6);
+		
   }
 }
 
