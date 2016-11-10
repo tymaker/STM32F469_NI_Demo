@@ -4,7 +4,7 @@
  *      *** Do not modify ! ***
  *
  * Project: 'STM32469I_DEMO' 
- * Target:  'STM32F4xx_Blink_Demo' 
+ * Target:  'Target 1' 
  */
 
 #ifndef RTE_COMPONENTS_H
