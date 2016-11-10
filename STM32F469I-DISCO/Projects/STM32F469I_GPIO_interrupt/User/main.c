@@ -53,6 +53,8 @@
 /* Private variables ---------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
 static void SystemClock_Config(void);
+static void EXTI0_IRQHandler_Config(void);
+
 /* Private functions ---------------------------------------------------------*/
 
 /**
@@ -68,8 +70,8 @@ void Init_GPIO(){
 			KEY1  PA0
 		*********************/
 		GPIO_InitTypeDef GPIO_Init_Structure;
+	
 		/* Init GPIO Clock  */
-		__HAL_RCC_GPIOA_CLK_ENABLE();
 		__HAL_RCC_GPIOK_CLK_ENABLE();
 	  /* Init */
 
@@ -79,14 +81,7 @@ void Init_GPIO(){
 	  GPIO_Init_Structure.Speed = GPIO_SPEED_HIGH;
 		HAL_GPIO_Init(GPIOK, &GPIO_Init_Structure);
 		
-		GPIO_Init_Structure.Pin   = GPIO_PIN_0;
-		GPIO_Init_Structure.Mode  = GPIO_MODE_INPUT;
-		GPIO_Init_Structure.Pull  = GPIO_PULLDOWN; /* 设置下拉电阻 */
-		GPIO_Init_Structure.Speed = GPIO_SPEED_HIGH;
-		HAL_GPIO_Init(GPIOA, &GPIO_Init_Structure);
-		
 		HAL_GPIO_WritePin(GPIOK, GPIO_PIN_3, GPIO_PIN_RESET);
-
 }
 
 
@@ -106,15 +101,15 @@ int main(void)
   /* Configure the system clock to 180 MHz */
   SystemClock_Config();
 	
-	Init_GPIO();  //INIT GPIO
+  /* -1- Initialize LEDs mounted on STM32469I-DISCOVERY board */
+  Init_GPIO();
 
+  /* -2- Configure EXTI0 (connected to PA.00 pin) in interrupt mode */
+  EXTI0_IRQHandler_Config();
+	
   /* Infinite loop */
   while (1)
   {
-			if(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0) == 0)
-				HAL_GPIO_WritePin(GPIOK, GPIO_PIN_3, GPIO_PIN_RESET);
-			else
-				HAL_GPIO_WritePin(GPIOK, GPIO_PIN_3, GPIO_PIN_SET);
 
   }
 }
@@ -196,6 +191,45 @@ static void SystemClock_Config(void)
   }
 }
 
+
+/**
+  * @brief  Configures EXTI line 0 (connected to PA.00 pin) in interrupt mode
+  * @param  None
+  * @retval None
+  */
+static void EXTI0_IRQHandler_Config(void)
+{
+  GPIO_InitTypeDef   GPIO_InitStructure;
+
+  /* Enable GPIOA clock */
+  __HAL_RCC_GPIOA_CLK_ENABLE();
+
+  /* Configure PA.00 pin as input floating */
+  GPIO_InitStructure.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStructure.Pull = GPIO_NOPULL;
+  GPIO_InitStructure.Pin = GPIO_PIN_0;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStructure);
+
+  /* Enable and set EXTI line 0 Interrupt to the lowest priority */
+  HAL_NVIC_SetPriority(EXTI0_IRQn, 2, 0);
+  HAL_NVIC_EnableIRQ(EXTI0_IRQn);
+}
+
+/**
+  * @brief EXTI line detection callbacks
+  * @param GPIO_Pin: Specifies the pins connected EXTI line
+  * @retval None
+  */
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+  if (GPIO_Pin == GPIO_PIN_0)
+  {
+    /* Toggle LED1 */
+		
+		/* Check the parameters */
+		GPIOK->ODR ^= GPIO_PIN_3;
+  }
+}
 
 
 #ifdef  USE_FULL_ASSERT
