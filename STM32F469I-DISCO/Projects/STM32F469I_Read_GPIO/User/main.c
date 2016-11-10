@@ -62,26 +62,33 @@ static void SystemClock_Config(void);
   */
 
 void Init_GPIO(){
-		/*
-		 * LED1  PG6
-		 * KEY1  PA0 
-		 */
+	
+	  /********************
+			LED4	PK3
+			KEY1  PA0
+		*********************/
 		GPIO_InitTypeDef GPIO_Init_Structure;
-		__HAL_RCC_GPIOG_CLK_ENABLE();
-		
-		GPIO_Init_Structure.Pin   = GPIO_PIN_6;
-		GPIO_Init_Structure.Mode  = GPIO_MODE_OUTPUT_PP;
-		GPIO_Init_Structure.Pull  = GPIO_PULLUP;
-		GPIO_Init_Structure.Speed = GPIO_SPEED_HIGH;
-		HAL_GPIO_Init(GPIOG, &GPIO_Init_Structure);
+		/* Init GPIO Clock  */
+		__HAL_RCC_GPIOA_CLK_ENABLE();
+		__HAL_RCC_GPIOK_CLK_ENABLE();
+	  /* Init */
+
+		GPIO_Init_Structure.Pin   = GPIO_PIN_3;
+	  GPIO_Init_Structure.Mode  = GPIO_MODE_OUTPUT_PP;
+	  GPIO_Init_Structure.Pull  = GPIO_PULLUP;
+	  GPIO_Init_Structure.Speed = GPIO_SPEED_HIGH;
+		HAL_GPIO_Init(GPIOK, &GPIO_Init_Structure);
 		
 		GPIO_Init_Structure.Pin   = GPIO_PIN_0;
 		GPIO_Init_Structure.Mode  = GPIO_MODE_INPUT;
-		GPIO_Init_Structure.Pull  = GPIO_PULLUP; 
+		GPIO_Init_Structure.Pull  = GPIO_PULLDOWN; /* 设置下拉电阻 */
 		GPIO_Init_Structure.Speed = GPIO_SPEED_HIGH;
+		HAL_GPIO_Init(GPIOA, &GPIO_Init_Structure);
 		
-		
+		HAL_GPIO_WritePin(GPIOK, GPIO_PIN_3, GPIO_PIN_RESET);
+
 }
+
 
 int main(void)
 {
@@ -98,10 +105,16 @@ int main(void)
   HAL_Init();
   /* Configure the system clock to 180 MHz */
   SystemClock_Config();
+	
+	Init_GPIO();  //INIT GPIO
 
   /* Infinite loop */
   while (1)
   {
+			if(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0) == 0)
+				HAL_GPIO_WritePin(GPIOK, GPIO_PIN_3, GPIO_PIN_RESET);
+			else
+				HAL_GPIO_WritePin(GPIOK, GPIO_PIN_3, GPIO_PIN_SET);
 
   }
 }
