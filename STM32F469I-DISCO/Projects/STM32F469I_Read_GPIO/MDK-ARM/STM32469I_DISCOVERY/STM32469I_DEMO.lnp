@@ -1,0 +1,19 @@
+--cpu Cortex-M4.fp
+".\stm32469i_discovery\main.o"
+".\stm32469i_discovery\stm32f4xx_it.o"
+".\stm32469i_discovery\stm32f4xx_hal_dma_ex.o"
+".\stm32469i_discovery\stm32f4xx_hal_dma.o"
+".\stm32469i_discovery\stm32f4xx_hal_rcc.o"
+".\stm32469i_discovery\stm32f4xx_hal.o"
+".\stm32469i_discovery\stm32f4xx_hal_pwr.o"
+".\stm32469i_discovery\stm32f4xx_hal_rcc_ex.o"
+".\stm32469i_discovery\stm32f4xx_hal_cortex.o"
+".\stm32469i_discovery\stm32f4xx_hal_gpio.o"
+".\stm32469i_discovery\stm32f4xx_hal_pwr_ex.o"
+".\stm32469i_discovery\stm32f4xx_hal_i2c.o"
+".\stm32469i_discovery\startup_stm32f469xx.o"
+".\stm32469i_discovery\system_stm32f4xx.o"
+--strict --scatter ".\STM32469I_DISCOVERY\STM32469I_DEMO.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\STM32469I_DEMO.map" -o .\STM32469I_DISCOVERY\STM32469I_DEMO.axf
