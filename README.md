@@ -5,5 +5,16 @@
 
 ### stm32f469NI栗子
 1.[STM32F469NI_Template](https://github.com/TyMaker/STM32F4xx/tree/master/STM32F469I-DISCO/Projects/STM32F469I_Template)<br />
-2.[STM32F469I_Blink](https://github.com/TyMaker/STM32F4xx/tree/master/STM32F469I-DISCO/Projects/STM32F469I_Blink)<br /> 
-3.
+2.[STM32F469I_Blink](https://github.com/TyMaker/STM32F4xx/tree/master/STM32F469I-DISCO/Projects/STM32F469I_Blink)<br />
+3.[STM32F469I_Read_GPIO](https://github.com/TyMaker/STM32F4xx/tree/master/STM32F469I-DISCO/Projects/STM32F469I_Read_GPIO)<br />
+4.[STM32F469I_GPIO_interrupt](https://github.com/TyMaker/STM32F4xx/tree/master/STM32F469I-DISCO/Projects/STM32F469I_GPIO_interrupt)<br />
+5.[STM32F469I_Systick](https://github.com/TyMaker/STM32F4xx/tree/master/STM32F469I-DISCO/Projects/STM32F469I_Systick)<br />
+6.[STM32F469I_Debug_Usart3_Example](https://github.com/TyMaker/STM32F4xx/tree/master/STM32F469I-DISCO/Projects/STM32F469I_Debug_Usart3_Example)<br />
+7.[STM32F469I_IWDG_Example](https://github.com/TyMaker/STM32F4xx/tree/master/STM32F469I-DISCO/Projects/STM32F469I_IWDG_Example)<br />
+8.[STM32F469I_TIM_TimeBase](https://github.com/TyMaker/STM32F4xx/tree/master/STM32F469I-DISCO/Projects/STM32F469I_TIM_TimeBase)<br />
+9.[STM32F469I_Usart](https://github.com/TyMaker/STM32F4xx/tree/master/STM32F469I-DISCO/Projects/STM32F469I_Usart)<br />
+10.[]()<br />
+11.[]()<br />
+12.[]()<br />
+13.[]()<br />
+14.[]()<br />
