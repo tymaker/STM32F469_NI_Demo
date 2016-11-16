@@ -3,6 +3,13 @@
 
 ![github](https://github.com/TyMaker/STM32F4xx/blob/master/STM32F469I-DISCO/Documentation/Picture/en.stm32f469i-disco.jpg "github")
 
+## 文 档
+[STM32™ 32-bit MCU family Leading supplier of ARM® Cortex®-M microcontrollers
+](https://github.com/TyMaker/STM32F4xx/tree/master/STM32F469I-DISCO/Documentation/en.brstm32.pdf)<br />
+[SCh原理图文件](https://github.com/TyMaker/STM32F4xx/tree/master/STM32F469I-DISCO/Documentation/STM32F469I-DISCO-sch.pdf)<br />
+[User manual ](https://github.com/TyMaker/STM32F4xx/blob/master/STM32F469I-DISCO/Documentation/en.DM00236781.pdf)<br />
+
+
 ### stm32f469NI栗子
 1.[STM32F469NI_Template](https://github.com/TyMaker/STM32F4xx/tree/master/STM32F469I-DISCO/Projects/STM32F469I_Template)<br />
 2.[STM32F469I_Blink](https://github.com/TyMaker/STM32F4xx/tree/master/STM32F469I-DISCO/Projects/STM32F469I_Blink)<br />
