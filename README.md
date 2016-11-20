@@ -37,20 +37,20 @@ Ethernet <br>
 
 
 ##Board features
-On-board ST-LINK/V2-1 debugger/programmer with SWD connector Board power supply: through the USB bus or from an external 3 V or 5 V supply voltage
-Flexible board power supply
-USB VBUS
-External source (3V or 5 V)
-4 inches 800x480 pixel TFT color LCD with MIPI DSI interface and capacitive touch screen
-SAI Audio DAC, with a stereo headphone output jack
-3 MEMS microphones
-MicroSD card connector
-I2C extension connector
-4Mx32bit SDRAM
-128-Mbit Quad-SPI NOR Flash
-Reset and wake-up buttons
-5 color user LEDs
-USB OTG FS with Micro-AB connector
+On-board ST-LINK/V2-1 debugger/programmer with SWD connector Board power supply: through the USB bus or from an external 3 V or 5 V supply voltage <br>
+Flexible board power supply <br>
+USB VBUS <br>
+External source (3V or 5 V) <br>
+4 inches 800x480 pixel TFT color LCD with MIPI DSI interface and capacitive touch screen <br>
+SAI Audio DAC, with a stereo headphone output jack <br>
+3 MEMS microphones <br>
+MicroSD card connector <br>
+I2C extension connector <br>
+4Mx32bit SDRAM <br>
+128-Mbit Quad-SPI NOR Flash <br>
+Reset and wake-up buttons <br>
+5 color user LEDs <br>
+USB OTG FS with Micro-AB connector <br>
 
 ## 文 档
 [STM32™ 32-bit MCU family Leading supplier of ARM® Cortex®-M microcontrollers
@@ -69,8 +69,8 @@ USB OTG FS with Micro-AB connector
 7.[STM32F469I_IWDG_Example](https://github.com/TyMaker/STM32F4xx/tree/master/STM32F469I-DISCO/Projects/STM32F469I_IWDG_Example)<br />
 8.[STM32F469I_TIM_TimeBase](https://github.com/TyMaker/STM32F4xx/tree/master/STM32F469I-DISCO/Projects/STM32F469I_TIM_TimeBase)<br />
 9.[STM32F469I_Usart](https://github.com/TyMaker/STM32F4xx/tree/master/STM32F469I-DISCO/Projects/STM32F469I_Usart)<br />
-10.[]()<br />
-11.[]()<br />
+10.[STM32F469I_FMC_SDRAM_Example](https://github.com/TyMaker/STM32F4xx/tree/master/STM32F469I-DISCO/Projects/STM32F469I_FMC_SDRAM_Example)<br />
+11.[STM32F469I_MIPI_DIS_Example](https://github.com/TyMaker/STM32F4xx/tree/master/STM32F469I-DISCO/STM32F469I_MIPI_DIS_Example)<br />
 12.[]()<br />
 13.[]()<br />
 14.[]()<br />
