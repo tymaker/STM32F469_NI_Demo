@@ -70,7 +70,7 @@ USB OTG FS with Micro-AB connector <br>
 8.[STM32F469I_TIM_TimeBase](https://github.com/TyMaker/STM32F4xx/tree/master/STM32F469I-DISCO/Projects/STM32F469I_TIM_TimeBase)<br />
 9.[STM32F469I_Usart](https://github.com/TyMaker/STM32F4xx/tree/master/STM32F469I-DISCO/Projects/STM32F469I_Usart)<br />
 10.[STM32F469I_FMC_SDRAM_Example](https://github.com/TyMaker/STM32F4xx/tree/master/STM32F469I-DISCO/Projects/STM32F469I_FMC_SDRAM_Example)<br />
-11.[STM32F469I_MIPI_DIS_Example](https://github.com/TyMaker/STM32F4xx/tree/master/STM32F469I-DISCO/STM32F469I_MIPI_DIS_Example)<br />
+11.[STM32F469I_MIPI_DIS_Example](https://github.com/TyMaker/STM32F4xx/tree/master/STM32F469I-DISCO/Projects/STM32F469I_MIPI_DIS_Example)<br />
 12.[]()<br />
 13.[]()<br />
 14.[]()<br />
