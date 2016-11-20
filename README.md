@@ -9,31 +9,31 @@ The discovery kit enables a wide range of use cases taking advantage of premium 
 
 
 ##Microcontroller features
-STM32F469NIH6 in BGA216 package
-ARM®32-bit Cortex®-M4 CPU with DSP, FPU, Chrom-ART Accelerator™
-180 MHz max CPU frequency
-VDD from 1.7 V to 3.6 V
-2048 KB Flash
-384 KB SRAM
-GPIOs (161) with external interrupt capability
-Timer GP (10
-Timer Advanced-control (2)
-Timer Basic (2)
-SPI/I2S (6/2)
-I2C (3)
-USART/UART (4)
-USB OTG HS/FS
-CAN (2)
-SAI (1)
-SDIO
-Camera interface
-MIPI-DSI Host
-LCD-TFT
-Chrom-ART Accelerator (DMS2D)
-Random number generator (TRNG for HW entropy)
-FMC memory controller
-Quad-SPI
-Ethernet
+STM32F469NIH6 in BGA216 package <br>
+ARM®32-bit Cortex®-M4 CPU with DSP, FPU, Chrom-ART Accelerator™ <br>
+180 MHz max CPU frequency <br>
+VDD from 1.7 V to 3.6 V <br>
+2048 KB Flash <br>
+384 KB SRAM <br>
+GPIOs (161) with external interrupt capability <br>
+Timer GP (10 <br>
+Timer Advanced-control (2) <br>
+Timer Basic (2) <br>
+SPI/I2S (6/2) <br>
+I2C (3) <br>
+USART/UART (4) <br>
+USB OTG HS/FS <br>
+CAN (2) <br>
+SAI (1) <br>
+SDIO <br>
+Camera interface <br>
+MIPI-DSI Host <br>
+LCD-TFT <br>
+Chrom-ART Accelerator (DMS2D) <br>
+Random number generator (TRNG for HW entropy) <br>
+FMC memory controller <br>
+Quad-SPI <br>
+Ethernet <br>
 
 
 ##Board features
