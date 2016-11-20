@@ -42,6 +42,20 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_hal.h"
 
+#include "stm32469i_discovery.h"
+#include "stm32469i_discovery_lcd.h"
+
+#define BSP_TEST_APPLI_ASSERT(__error_condition__)    do { if(__error_condition__) \
+                                                           {  while(1);  \
+                                                           } \
+                                                          } while(0)
+#else
+/* Assert not activated : macro has no effect */
+#define BSP_TEST_APPLI_ASSERT(__error_condition__)    do { if(__error_condition__) \
+                                                           {  ;  \
+                                                           } \
+                                                         } while(0)
+
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/

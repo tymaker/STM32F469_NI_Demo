@@ -41,6 +41,8 @@
 #include "main.h"
 #include "stm32f4xx_it.h"
 
+extern UART_HandleTypeDef huart3;
+
 /** @addtogroup STM32F4xx_HAL_Examples
   * @{
   */
@@ -179,7 +181,10 @@ void EXTI0_IRQHandler(void)
 /**
   * @}
   */
-
+void USART3_IRQHandler(void)
+{
+	HAL_UART_IRQHandler(&huart3);	//调用HAL库中断处理公用函数
+}
 /**
   * @}
   */

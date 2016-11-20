@@ -365,7 +365,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F469xx</Define>
               <Undefine></Undefine>
-              <IncludePath>..\User;..\Src;..\Inc;..\..\..\Drivers\STM32F4xx_HAL_Driver\Src;..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc;..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy</IncludePath>
+              <IncludePath>..\User;..\Src;..\Inc;..\..\..\Drivers\STM32F4xx_HAL_Driver\Src;..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc;..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy;..\..\..\Drivers\Fonts</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -478,6 +478,56 @@
               <FileType>1</FileType>
               <FilePath>..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_i2c.c</FilePath>
             </File>
+            <File>
+              <FileName>stm32f4xx_hal_dsi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dsi.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_dma2d.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma2d.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_ltdc_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_ltdc_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_ltdc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_ltdc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_i2c_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_i2c_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_rtc_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rtc_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_sdram.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_sdram.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_sram.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_sram.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_ll_fmc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_fmc.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -492,6 +542,58 @@
         </Group>
         <Group>
           <GroupName>Drivers/BSP/STM32F469I-Discovery</GroupName>
+          <Files>
+            <File>
+              <FileName>stm32469i_discovery.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\stm32469i_discovery.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32469i_discovery_lcd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\stm32469i_discovery_lcd.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32469i_discovery_sdram.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\stm32469i_discovery_sdram.c</FilePath>
+            </File>
+            <File>
+              <FileName>otm8009a.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\otm8009a.c</FilePath>
+            </File>
+            <File>
+              <FileName>font8.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\Drivers\Fonts\font8.c</FilePath>
+            </File>
+            <File>
+              <FileName>font12.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\Drivers\Fonts\font12.c</FilePath>
+            </File>
+            <File>
+              <FileName>font16.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\Drivers\Fonts\font16.c</FilePath>
+            </File>
+            <File>
+              <FileName>font20.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\Drivers\Fonts\font20.c</FilePath>
+            </File>
+            <File>
+              <FileName>font24.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\Drivers\Fonts\font24.c</FilePath>
+            </File>
+            <File>
+              <FileName>fonts.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\Drivers\Fonts\fonts.h</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>Drivers/CMSIS</GroupName>
